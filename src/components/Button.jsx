@@ -17,7 +17,7 @@ class Button extends Component {
                     type='submit'
                     id='submit'
                     onClick={this.action}
-                    class='btn btn-primary'>
+                    className='btn btn-primary'>
                     {this.title}
                 </button>
                 <br/>

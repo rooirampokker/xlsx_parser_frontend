@@ -16,7 +16,7 @@ class FormContainer extends Component {
             genericInputValue: '',
             submitted: false
         }
-        this.apiUrl             = 'http://dev.mobiworkx.com/src/';
+        this.apiUrl             = 'http://localhost/xlsx_importer/xlsx_parser_backend/src/';
         this.dropdownName       = 'sheet_option';
         this.columns            = '';
         this.genericInputClass  = 'form-control';
@@ -47,7 +47,9 @@ class FormContainer extends Component {
             headers: myHeaders,
             credentials: 'include'
         })
-            .then(response => response.json())
+            .then(
+              response => response.json()
+            )
             .then((response) => {
                 this.setState({
                     sheetNames: response.payload,
@@ -87,6 +89,7 @@ class FormContainer extends Component {
          })
             .then(response => response.json())
             .then((response) => {
+                console.log(response);
                this.columns = response.payload.columns;
                this.data    = response.payload.data;
                this.setState({submitted: true});

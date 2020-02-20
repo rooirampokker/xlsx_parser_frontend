@@ -11,14 +11,14 @@ class FileUploader extends Component {
 
     render() {
         return (
-            <React.Fragment>
-                <input type='file'
-                       id='xlsxFileUpload'
-                       name='xlsxFileUpload'
-                       class='form-control-file'
-                       onChange={this.action}
+            <>
+                <input type      = 'file'
+                       id        = 'xlsxFileUpload'
+                       name      = 'xlsxFileUpload'
+                       className = 'form-control-file'
+                       onChange  ={this.action}
                 />
-            </React.Fragment>
+            </>
         );
     }
 }

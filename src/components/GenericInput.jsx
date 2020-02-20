@@ -16,13 +16,13 @@ class genericInput extends Component {
 
     render() {
         return (
-            <React.Fragment>
-                <input type     = {this.inputType}
-                       id       = {this.id}
-                       class    = {this.class}
-                       onChange = {this.action}
+            <>
+                <input type      = {this.inputType}
+                       id        = {this.id}
+                       className = {this.class}
+                       onChange  = {this.action}
                 />
-            </React.Fragment>
+            </>
         );
     }
 }
